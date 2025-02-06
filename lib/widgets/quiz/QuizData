@@ -1,0 +1,192 @@
+// models/question.dart
+class Question {
+  final String text;
+  final List<String> options;
+  final int correctAnswerIndex;
+
+  Question({
+    required this.text,
+    required this.options,
+    required this.correctAnswerIndex,
+  });
+}
+class QuizData {
+  static final Map<String, List<Question>> categoryQuestions = {
+   // Update for Science category
+'Science': [
+  Question(
+    text: "What is the chemical formula for water?",
+    options: ['H2O', 'O2', 'CO2', 'N2'],
+    correctAnswerIndex: 0,
+  ),
+  Question(
+    text: "Which planet is closest to the Sun?",
+    options: ['Earth', 'Mercury', 'Venus', 'Mars'],
+    correctAnswerIndex: 1,
+  ),
+  Question(
+    text: "Which gas do plants absorb for photosynthesis?",
+    options: ['Oxygen', 'Carbon Dioxide', 'Nitrogen', 'Hydrogen'],
+    correctAnswerIndex: 1,
+  ),
+  Question(
+    text: "What is the chemical symbol for water?",
+    options: ['H2O', 'O', 'HO', 'H2'],
+    correctAnswerIndex: 0,
+  ),
+  Question(
+    text: "What is the unit of force?",
+    options: ['Newton', 'Joule', 'Watt', 'Pascal'],
+    correctAnswerIndex: 0,
+  ),
+],
+
+// Update for History category
+'History': [
+  Question(
+    text: "Who was the first Emperor of China?",
+    options: ['Emperor Qin Shi Huang', 'Emperor Wu', 'Emperor Tang Taizong', 'Emperor Han Gaozu'],
+    correctAnswerIndex: 0,
+  ),
+  Question(
+    text: "When did the Titanic sink?",
+    options: ['1912', '1905', '1920', '1898'],
+    correctAnswerIndex: 0,
+  ),
+  Question(
+    text: "Who was the first woman to fly solo across the Atlantic Ocean?",
+    options: ['Amelia Earhart', 'Harriet Quimby', 'Bessie Coleman', 'Jacqueline Cochran'],
+    correctAnswerIndex: 0,
+  ),
+  Question(
+    text: "Which ancient civilization built the pyramids of Giza?",
+    options: ['Mesopotamians', 'Egyptians', 'Romans', 'Greeks'],
+    correctAnswerIndex: 1,
+  ),
+  Question(
+    text: "What year did the Cold War end?",
+    options: ['1989', '1991', '1993', '1985'],
+    correctAnswerIndex: 1,
+  ),
+],
+
+// Update for Technology category
+'Technology': [
+  Question(
+    text: "What does HTML stand for?",
+    options: ['HyperText Markup Language', 'Hyper Transfer Markup Language', 'HyperText Management Language', 'HyperTool Markup Language'],
+    correctAnswerIndex: 0,
+  ),
+  Question(
+    text: "What was the first personal computer?",
+    options: ['Apple I', 'IBM PC', 'Commodore 64', 'Altair 8800'],
+    correctAnswerIndex: 3,
+  ),
+  Question(
+    text: "What is the primary function of an operating system?",
+    options: ['Manage hardware', 'Run applications', 'Store data', 'Connect to the internet'],
+    correctAnswerIndex: 0,
+  ),
+  Question(
+    text: "What is the full form of HTTP?",
+    options: ['HyperText Transfer Protocol', 'Hyper Transfer Text Protocol', 'HyperText Transport Protocol', 'HyperText Transaction Protocol'],
+    correctAnswerIndex: 0,
+  ),
+  Question(
+    text: "What is GitHub used for?",
+    options: ['Code collaboration', 'Project management', 'Website hosting', 'Design work'],
+    correctAnswerIndex: 0,
+  ),
+],
+
+// Update for Mathematics category
+'Mathematics': [
+  Question(
+    text: "What is the value of pi?",
+    options: ['3.14', '3.141', '3.1415', '3.14159'],
+    correctAnswerIndex: 3,
+  ),
+  Question(
+    text: "What is the square root of 144?",
+    options: ['10', '11', '12', '14'],
+    correctAnswerIndex: 2,
+  ),
+  Question(
+    text: "What is the sum of angles in a triangle?",
+    options: ['180°', '360°', '90°', '270°'],
+    correctAnswerIndex: 0,
+  ),
+  Question(
+    text: "What is the formula for the area of a circle?",
+    options: ['πr²', '2πr', 'πd', 'πr³'],
+    correctAnswerIndex: 0,
+  ),
+  Question(
+    text: "What is the value of 2⁵?",
+    options: ['32', '16', '64', '128'],
+    correctAnswerIndex: 0,
+  ),
+],
+
+
+// Update for Sports category
+'Sports': [
+  Question(
+    text: "Who won the FIFA World Cup in 2018?",
+    options: ['Brazil', 'Germany', 'France', 'Argentina'],
+    correctAnswerIndex: 2,
+  ),
+  Question(
+    text: "What is the highest possible score in a single game of bowling?",
+    options: ['200', '300', '400', '500'],
+    correctAnswerIndex: 1,
+  ),
+  Question(
+    text: "Who holds the record for most Olympic gold medals?",
+    options: ['Michael Phelps', 'Usain Bolt', 'Simone Biles', 'Carl Lewis'],
+    correctAnswerIndex: 0,
+  ),
+  Question(
+    text: "Which country won the most medals in the 2020 Summer Olympics?",
+    options: ['USA', 'China', 'Japan', 'Germany'],
+    correctAnswerIndex: 0,
+  ),
+  Question(
+    text: "What is the length of a standard marathon?",
+    options: ['26.1 miles', '24.5 miles', '30 miles', '32 miles'],
+    correctAnswerIndex: 0,
+  ),
+],
+// Update for Geography category
+'Geography': [
+  Question(
+    text: "What is the capital of France?",
+    options: ['Paris', 'London', 'Berlin', 'Madrid'],
+    correctAnswerIndex: 0,
+  ),
+  Question(
+    text: "Which is the largest continent by area?",
+    options: ['Asia', 'Africa', 'North America', 'Europe'],
+    correctAnswerIndex: 0,
+  ),
+  Question(
+    text: "What is the longest river in the world?",
+    options: ['Amazon River', 'Nile River', 'Yangtze River', 'Mississippi River'],
+    correctAnswerIndex: 1,
+  ),
+  Question(
+    text: "Which country has the most time zones?",
+    options: ['USA', 'China', 'Russia', 'India'],
+    correctAnswerIndex: 2,
+  ),
+  Question(
+    text: "Mount Everest is located in which country?",
+    options: ['India', 'Nepal', 'China', 'Pakistan'],
+    correctAnswerIndex: 1,
+  ),
+],
+
+
+
+  };
+}
